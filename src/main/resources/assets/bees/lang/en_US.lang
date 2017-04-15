@@ -1,0 +1,26 @@
+﻿#en_US
+#This is the Main language configuration file
+#========
+#= Bees blocks =
+#========
+tile.Hive.name=Beehive
+tile.beeBox.name=Bee Box
+tile.wax.name=Wax Block
+tile.candle.name=Candle
+#========
+#= Bees items =
+#========
+item.beeVeil.name=Bee Veil
+item.plainComb.name=Honeycomb
+item.beeComb.name=Bee Comb
+item.beeScoop.name=Scoop
+item.beeswax.name=Beeswax
+item.honey.name=Honey
+item.Wax Mold.waxMold.name=Wax Mold Construction
+item.Wax Mold.waxMoldCooked.name=Ceramic Mold Construction
+item.mead.name=Mead
+#========
+#= Bees GUIs =
+#========
+death.attack.bees=%1$s was stung to death
+fluid.bees_mead=Mead

@@ -1,0 +1,130 @@
+---- Minecraft Crash Report ----
+// Quite honestly, I wouldn't worry myself about that.
+
+Time: 3/2/17 5:54 PM
+Description: Updating screen events
+
+java.lang.NullPointerException: Updating screen events
+	at com.peffern.bees.SlotBeeBox.transformBeeComb(SlotBeeBox.java:55)
+	at com.peffern.bees.ContainerBeeBox.transferStackInSlot(ContainerBeeBox.java:76)
+	at net.minecraft.inventory.Container.slotClick(Container.java:279)
+	at net.minecraft.client.multiplayer.PlayerControllerMP.windowClick(PlayerControllerMP.java:478)
+	at codechicken.nei.guihook.GuiContainerManager.handleSlotClick(GuiContainerManager.java:503)
+	at net.minecraft.client.gui.inventory.GuiContainer.handleMouseClick(GuiContainer.java:673)
+	at net.minecraft.client.gui.inventory.GuiContainer.public_func_146984_a(GuiContainer.java)
+	at codechicken.nei.guihook.DefaultSlotClickHandler.callHandleMouseClick(DefaultSlotClickHandler.java)
+	at codechicken.nei.guihook.DefaultSlotClickHandler.handleSlotClick(DefaultSlotClickHandler.java:17)
+	at codechicken.nei.guihook.GuiContainerManager.handleMouseClick(GuiContainerManager.java:452)
+	at net.minecraft.client.gui.inventory.GuiContainer.managerHandleMouseClick(GuiContainer.java)
+	at net.minecraft.client.gui.inventory.GuiContainer.mouseClicked(GuiContainer.java:418)
+	at net.minecraft.client.gui.GuiScreen.handleMouseInput(GuiScreen.java:344)
+	at net.minecraft.client.gui.inventory.GuiContainer.handleMouseInput(GuiContainer.java)
+	at net.minecraft.client.gui.GuiScreen.handleInput(GuiScreen.java:313)
+	at net.minecraft.client.Minecraft.runTick(Minecraft.java:1731)
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1039)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:962)
+	at net.minecraft.client.main.Main.main(Main.java:164)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at net.minecraftforge.gradle.GradleStartCommon.launch(Unknown Source)
+	at GradleStart.main(Unknown Source)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at com.peffern.bees.SlotBeeBox.transformBeeComb(SlotBeeBox.java:55)
+	at com.peffern.bees.ContainerBeeBox.transferStackInSlot(ContainerBeeBox.java:76)
+	at net.minecraft.inventory.Container.slotClick(Container.java:279)
+	at net.minecraft.client.multiplayer.PlayerControllerMP.windowClick(PlayerControllerMP.java:478)
+	at codechicken.nei.guihook.GuiContainerManager.handleSlotClick(GuiContainerManager.java:503)
+	at net.minecraft.client.gui.inventory.GuiContainer.handleMouseClick(GuiContainer.java:673)
+	at net.minecraft.client.gui.inventory.GuiContainer.public_func_146984_a(GuiContainer.java)
+	at codechicken.nei.guihook.DefaultSlotClickHandler.callHandleMouseClick(DefaultSlotClickHandler.java)
+	at codechicken.nei.guihook.DefaultSlotClickHandler.handleSlotClick(DefaultSlotClickHandler.java:17)
+	at codechicken.nei.guihook.GuiContainerManager.handleMouseClick(GuiContainerManager.java:452)
+	at net.minecraft.client.gui.inventory.GuiContainer.managerHandleMouseClick(GuiContainer.java)
+	at net.minecraft.client.gui.inventory.GuiContainer.mouseClicked(GuiContainer.java:418)
+	at net.minecraft.client.gui.GuiScreen.handleMouseInput(GuiScreen.java:344)
+	at net.minecraft.client.gui.inventory.GuiContainer.handleMouseInput(GuiContainer.java)
+	at net.minecraft.client.gui.GuiScreen.handleInput(GuiScreen.java:313)
+
+-- Affected screen --
+Details:
+	Screen name: com.peffern.bees.GuiBeeBox
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 1 total; [EntityClientPlayerMP['Player340'/107, l='MpServer', x=-66.06, y=155.62, z=-8462.82]]
+	Chunk stats: MultiplayerChunkCache: 620, 620
+	Level seed: 884256032729583098
+	Level generator: ID 00 - TFCDefault, ver 0. Features enabled: false
+	Level generator options: 
+	Level spawn location: World: (-36,159,-8452), Chunk: (at 12,9,12 in -3,-529; contains blocks -48,0,-8464 to -33,255,-8449), Region: (-1,-17; contains chunks -32,-544 to -1,-513, blocks -512,0,-8704 to -1,255,-8193)
+	Level time: 709552 game time, 720885 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Cheats: false
+	Forced entities: 101 total; [EntityZombieTFC['Zombie'/9729, l='MpServer', x=-36.03, y=79.00, z=-8404.56], EntitySkeletonTFC['Skeleton'/2, l='MpServer', x=-168.88, y=145.00, z=-8525.66], EntityZombieTFC['Zombie'/9730, l='MpServer', x=-37.69, y=82.00, z=-8399.31], EntityZombieTFC['Zombie'/9731, l='MpServer', x=-38.69, y=82.00, z=-8399.69], EntityBat['Bat'/13571, l='MpServer', x=-114.31, y=53.48, z=-8408.28], EntitySkeletonTFC['Skeleton'/5894, l='MpServer', x=-42.91, y=65.00, z=-8412.50], EntityZombieTFC['Zombie'/7430, l='MpServer', x=-71.94, y=81.00, z=-8404.50], EntityZombieTFC['Zombie'/1041, l='MpServer', x=-118.41, y=148.00, z=-8524.31], EntityZombieTFC['Zombie'/12820, l='MpServer', x=-80.50, y=79.00, z=-8365.50], EntityZombieTFC['Zombie'/1045, l='MpServer', x=-112.50, y=149.00, z=-8523.50], EntityZombieTFC['Zombie'/12821, l='MpServer', x=-73.94, y=81.00, z=-8366.50], EntitySkeletonTFC['Skeleton'/12824, l='MpServer', x=-76.50, y=79.00, z=-8363.50], EntitySkeletonTFC['Skeleton'/5401, l='MpServer', x=-40.47, y=59.00, z=-8411.63], EntitySkeletonTFC['Skeleton'/12826, l='MpServer', x=-78.50, y=81.00, z=-8372.13], EntityBat['Bat'/11803, l='MpServer', x=-56.09, y=53.76, z=-8405.47], EntityCreeperTFC['Creeper'/2332, l='MpServer', x=40.50, y=152.00, z=-8478.50], EntityPigTFC['Pig'/30, l='MpServer', x=-94.03, y=151.00, z=-8525.09], EntityBat['Bat'/6942, l='MpServer', x=-39.04, y=55.63, z=-8396.42], EntityBat['Bat'/11807, l='MpServer', x=-57.84, y=54.48, z=-8413.91], EntityPigTFC['Pig'/32, l='MpServer', x=-92.81, y=148.00, z=-8502.09], EntityZombieTFC['Zombie'/4899, l='MpServer', x=-91.94, y=76.00, z=-8375.63], EntityBat['Bat'/8486, l='MpServer', x=-52.69, y=55.65, z=-8404.63], EntityZombieTFC['Zombie'/10537, l='MpServer', x=-70.50, y=73.00, z=-8413.50], EntityZombieTFC['Zombie'/10539, l='MpServer', x=-62.50, y=73.00, z=-8413.50], EntityBat['Bat'/13611, l='MpServer', x=-109.28, y=60.00, z=-8407.22], EntityZombieTFC['Zombie'/6189, l='MpServer', x=-43.50, y=84.00, z=-8413.50], EntitySkeletonTFC['Skeleton'/12589, l='MpServer', x=-46.75, y=84.00, z=-8400.46], EntityZombieTFC['Zombie'/6190, l='MpServer', x=-43.50, y=84.00, z=-8414.50], EntityZombieTFC['Zombie'/6191, l='MpServer', x=-43.50, y=84.00, z=-8412.50], EntityZombieTFC['Zombie'/2865, l='MpServer', x=-26.50, y=67.00, z=-8386.50], EntityZombieTFC['Zombie'/6461, l='MpServer', x=-73.50, y=63.00, z=-8380.50], EntityZombieTFC['Zombie'/14142, l='MpServer', x=-46.50, y=59.00, z=-8411.50], EntityZombieTFC['Zombie'/14143, l='MpServer', x=-46.50, y=59.00, z=-8410.50], EntityZombieTFC['Zombie'/14144, l='MpServer', x=-44.50, y=59.00, z=-8409.50], EntityItem['item.item.rottenFlesh'/6212, l='MpServer', x=-119.25, y=148.13, z=-8524.38], EntityZombieTFC['Zombie'/6982, l='MpServer', x=-68.50, y=134.00, z=-8358.50], EntityZombieTFC['Zombie'/7242, l='MpServer', x=-37.41, y=63.00, z=-8423.03], EntityZombieTFC['Zombie'/8525, l='MpServer', x=-22.50, y=74.00, z=-8404.50], EntityZombieTFC['Zombie'/8526, l='MpServer', x=-21.50, y=74.00, z=-8405.50], EntityZombieTFC['Zombie'/2384, l='MpServer', x=-56.50, y=67.00, z=-8394.50], EntitySkeletonTFC['Skeleton'/9314, l='MpServer', x=-51.50, y=84.00, z=-8389.09], EntityCreeperTFC['Creeper'/13922, l='MpServer', x=-3.50, y=81.00, z=-8414.50], EntitySkeletonTFC['Skeleton'/7015, l='MpServer', x=-90.50, y=124.00, z=-8367.50], EntityClientPlayerMP['Player340'/107, l='MpServer', x=-66.06, y=155.62, z=-8462.82], EntitySpiderTFC['Spider'/5231, l='MpServer', x=-48.56, y=73.00, z=-8368.59], EntityZombieTFC['Zombie'/2417, l='MpServer', x=-10.50, y=69.00, z=-8401.50], EntitySkeletonTFC['Skeleton'/7793, l='MpServer', x=-77.75, y=79.00, z=-8363.06], EntitySkeletonTFC['Skeleton'/7794, l='MpServer', x=-81.94, y=79.00, z=-8363.28], EntityItem['item.item.rottenFlesh'/7028, l='MpServer', x=-119.94, y=145.13, z=-8474.22], EntitySkeletonTFC['Skeleton'/5750, l='MpServer', x=-45.41, y=85.00, z=-8400.58], EntitySpiderTFC['Spider'/7798, l='MpServer', x=-79.25, y=79.00, z=-8362.66], EntitySpiderTFC['Spider'/7801, l='MpServer', x=-83.50, y=79.00, z=-8361.50], EntityCreeperTFC['Creeper'/11900, l='MpServer', x=-12.47, y=125.00, z=-8382.00], EntityCreeperTFC['Creeper'/11901, l='MpServer', x=-11.22, y=125.00, z=-8382.69], EntityCreeperTFC['Creeper'/6532, l='MpServer', x=-82.31, y=65.00, z=-8378.59], EntitySkeletonTFC['Skeleton'/7300, l='MpServer', x=-68.50, y=77.00, z=-8397.50], EntityCreeperTFC['Creeper'/6533, l='MpServer', x=-85.03, y=69.00, z=-8383.31], EntityZombieTFC['Zombie'/6534, l='MpServer', x=-42.50, y=61.00, z=-8407.50], EntityBat['Bat'/13965, l='MpServer', x=-44.25, y=60.73, z=-8410.16], EntitySkeletonTFC['Skeleton'/8343, l='MpServer', x=23.50, y=138.00, z=-8427.50], EntityCreeperTFC['Creeper'/11929, l='MpServer', x=-52.47, y=53.00, z=-8403.69], EntityZombieTFC['Zombie'/9117, l='MpServer', x=-57.50, y=51.00, z=-8414.50], EntityZombieTFC['Zombie'/9118, l='MpServer', x=-61.22, y=51.00, z=-8410.84], EntityZombieTFC['Zombie'/5023, l='MpServer', x=-14.50, y=82.00, z=-8398.50], EntityZombieTFC['Zombie'/5024, l='MpServer', x=-12.50, y=82.00, z=-8399.50], EntitySkeletonTFC['Skeleton'/9121, l='MpServer', x=-61.50, y=51.00, z=-8415.50], EntityZombieTFC['Zombie'/9638, l='MpServer', x=-63.50, y=53.00, z=-8400.50], EntityCreeperTFC['Creeper'/7602, l='MpServer', x=-52.50, y=66.00, z=-8388.50], EntityZombieTFC['Zombie'/12212, l='MpServer', x=-28.50, y=58.00, z=-8392.50], EntityItem['item.item.rottenFlesh'/6583, l='MpServer', x=-130.56, y=155.13, z=-8414.06], EntityZombieTFC['Zombie'/12215, l='MpServer', x=-76.41, y=81.00, z=-8404.09], EntityItem['item.item.rottenFlesh'/6584, l='MpServer', x=-129.56, y=155.13, z=-8412.53], EntityZombieTFC['Zombie'/12216, l='MpServer', x=-73.50, y=80.00, z=-8401.50], EntityZombieTFC['Zombie'/12217, l='MpServer', x=-75.44, y=80.00, z=-8404.56], EntityBat['Bat'/12473, l='MpServer', x=-61.85, y=53.27, z=-8410.75], EntityBat['Bat'/12479, l='MpServer', x=-41.97, y=57.36, z=-8402.42], EntityZombieTFC['Zombie'/3264, l='MpServer', x=-50.50, y=63.00, z=-8393.44], EntityZombieTFC['Zombie'/3265, l='MpServer', x=-50.50, y=63.00, z=-8394.34], EntityCreeperTFC['Creeper'/8389, l='MpServer', x=-63.50, y=93.00, z=-8568.50], EntityZombieTFC['Zombie'/9415, l='MpServer', x=-57.78, y=70.00, z=-8409.56], EntityZombieTFC['Zombie'/6092, l='MpServer', x=-35.50, y=71.00, z=-8414.50], EntityZombieTFC['Zombie'/10704, l='MpServer', x=-88.50, y=78.00, z=-8365.50], EntityZombieTFC['Zombie'/9684, l='MpServer', x=-66.50, y=56.00, z=-8398.50], EntityBat['Bat'/3031, l='MpServer', x=-40.94, y=55.01, z=-8395.92], EntitySpiderTFC['Spider'/10713, l='MpServer', x=-63.50, y=51.00, z=-8404.50], EntitySpiderTFC['Spider'/10715, l='MpServer', x=-57.59, y=51.00, z=-8409.00], EntitySkeletonTFC['Skeleton'/10984, l='MpServer', x=-29.50, y=81.00, z=-8394.50], EntitySkeletonTFC['Skeleton'/10985, l='MpServer', x=-28.50, y=81.00, z=-8393.50], EntitySkeletonTFC['Skeleton'/10986, l='MpServer', x=-30.50, y=81.00, z=-8392.50], EntitySkeletonTFC['Skeleton'/10987, l='MpServer', x=-23.50, y=81.00, z=-8389.50], EntitySkeletonTFC['Skeleton'/10988, l='MpServer', x=-21.50, y=81.00, z=-8391.50], EntitySkeletonTFC['Skeleton'/7156, l='MpServer', x=-38.50, y=66.00, z=-8408.50], EntitySkeletonTFC['Skeleton'/6901, l='MpServer', x=-20.50, y=83.00, z=-8395.50], EntityZombieTFC['Zombie'/6902, l='MpServer', x=-58.69, y=70.00, z=-8409.41], EntityZombieTFC['Zombie'/7672, l='MpServer', x=-45.50, y=71.00, z=-8404.50], EntityBat['Bat'/10491, l='MpServer', x=-44.75, y=56.10, z=-8402.25], EntityZombieTFC['Zombie'/9468, l='MpServer', x=-92.50, y=74.00, z=-8379.50], EntityZombieTFC['Zombie'/7165, l='MpServer', x=-28.50, y=73.00, z=-8411.50], EntityZombieTFC['Zombie'/9469, l='MpServer', x=-91.94, y=77.00, z=-8374.50], EntityBat['Bat'/10494, l='MpServer', x=-40.25, y=56.04, z=-8404.28], EntityZombieTFC['Zombie'/10750, l='MpServer', x=-48.50, y=73.00, z=-8370.19]]
+	Retry entities: 0 total; []
+	Server brand: fml,forge
+	Server type: Integrated singleplayer server
+Stacktrace:
+	at net.minecraft.client.multiplayer.WorldClient.addWorldInfoToCrashReport(WorldClient.java:415)
+	at net.minecraft.client.Minecraft.addGraphicsAndWorldToCrashReport(Minecraft.java:2566)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:984)
+	at net.minecraft.client.main.Main.main(Main.java:164)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at net.minecraftforge.gradle.GradleStartCommon.launch(Unknown Source)
+	at GradleStart.main(Unknown Source)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.7.10
+	Operating System: Mac OS X (x86_64) version 10.10.5
+	Java Version: 1.8.0_91, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 367227816 bytes (350 MB) / 782761984 bytes (746 MB) up to 1908932608 bytes (1820 MB)
+	JVM Flags: 0 total; 
+	AABB Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 17
+	FML: MCP v9.05 FML v7.10.99.99 Minecraft Forge 10.13.4.1558 9 mods loaded, 9 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+	UCHIJAAAA	mcp{9.05} [Minecraft Coder Pack] (minecraft.jar) 
+	UCHIJAAAA	FML{7.10.99.99} [Forge Mod Loader] (forgeSrc-1.7.10-10.13.4.1558-1.7.10.jar) 
+	UCHIJAAAA	Forge{10.13.4.1558} [Minecraft Forge] (forgeSrc-1.7.10-10.13.4.1558-1.7.10.jar) 
+	UCHIJAAAA	NotEnoughItems{1.0.4.95} [Not Enough Items] (NotEnoughItems-1.7.10-1.0.4.95-dev.jar) 
+	UCHIJAAAA	tfc_coremod{0.79.29} [TFC[coremod]] (minecraft.jar) 
+	UCHIJAAAA	CodeChickenCore{1.0.4.35} [CodeChicken Core] (minecraft.jar) 
+	UCHIJAAAA	bees{1.0} [Bees?] (bin) 
+	UCHIJAAAA	Waila{1.5.11} [Waila] (Waila-1.5.11-RC2-NONEI_1.7.10.jar) 
+	UCHIJAAAA	terrafirmacraft{0.79.29} [TerraFirmaCraft] (bin) 
+	GL info: ' Vendor: 'Intel' Version: '2.1 INTEL-10.6.33' Renderer: 'Intel(R) Iris(TM) Graphics 6100'
+	Launched Version: 1.7.10
+	LWJGL: 2.9.1
+	OpenGL: Intel(R) Iris(TM) Graphics 6100 GL version 2.1 INTEL-10.6.33, Intel
+	GL Caps: Using GL 1.3 multitexturing.
+Using framebuffer objects because ARB_framebuffer_object is supported and separate blending is supported.
+Anisotropic filtering is supported and maximum anisotropy is 16.
+Shaders are available because OpenGL 2.1 is supported.
+
+	Is Modded: Definitely; Client brand changed to 'fml,forge'
+	Type: Client (map_client.txt)
+	Resource Packs: []
+	Current Language: English (US)
+	Profiler Position: N/A (disabled)
+	Vec3 Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	Anisotropic Filtering: Off (1)
